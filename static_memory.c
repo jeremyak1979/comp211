@@ -65,10 +65,10 @@ char *string_calloc(size_t size){
 }
 
 char *string_realloc(char *str, size_t size){
-	str = realloc(str, size);
-	if(str == NULL){
+	char *ptr = realloc(str, size);
+	if(ptr == NULL){
 		fprintf(stderr, "Out of Memory");
 		exit(EXIT_FAILURE);
 	}
-	return str;
+	return ptr;
 }
